@@ -401,7 +401,7 @@ WH: We said that array subclasses are new and safe because unmodified code won't
 <li></li>
 </ul>
 <a href="#510-function-parameter-scoping-and-instantiation"><h2 id="510-function-parameter-scoping-and-instantiation">5.10 Function parameter scoping and instantiation</h2></a><p>Andreas Rossberg</p>
-<p>[Slides](need to commit for a link)</p>
+<p><a href="default-arguments.pdf">Slides</a></p>
 <p>Default Parameters/Arguments</p>
 <p>Goals: Convenience Feature</p>
 <ul>
@@ -417,12 +417,13 @@ WH: We said that array subclasses are new and safe because unmodified code won't
 <p>Solution:</p>
 <pre><code>- Defaults should behave as if provided by wrapper function
 </code></pre>
-<p>Solution:
-- Evaluate defaults in seperate scope
+<p>Solution:</p>
+<pre><code>- Evaluate defaults in seperate scope
 - Can see &quot;this&quot;, &quot;arguments&quot; and function name (where applicable)
 - Can see other parameters
 - Cannot see bindings created in function body
-- Cannot see bindings created in function body LATER (via eval)</p>
+- Cannot see bindings created in function body LATER (via eval)
+</code></pre>
 <p>Evaluation Order</p>
 <pre><code class="language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">f</span>(<span class="hljs-params">x = y, y = <span class="hljs-number">2</span></span>) </span>{}
 
@@ -496,7 +497,6 @@ WH: We said that array subclasses are new and safe because unmodified code won't
 <ul>
 <li>Duplicates are illegal</li>
 <li>Rules about redeclaration</li>
-<li></li>
 </ul>
 <pre><code class="language-js"><span class="hljs-comment">// If...</span>
 
